@@ -19,10 +19,15 @@ public class Movemment : MonoBehaviour
     
     void Update()
     {
+       Move(); 
+    }
+
+
+    public void Move() {
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
-
         Vector2 direcao = new Vector2(horizontal, vertical);
+        direcao = direcao.normalized;
         this.rig.velocity = direcao * this.velMovimento;
     }
 }
