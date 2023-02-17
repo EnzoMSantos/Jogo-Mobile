@@ -4,13 +4,19 @@ using UnityEngine;
 
 public class Movemment : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField]
+    private Rigidbody2D rig;
+
+    [SerializeField]
+    private float velMovimento;
+
+   
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         
